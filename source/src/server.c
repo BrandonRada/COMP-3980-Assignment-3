@@ -179,9 +179,10 @@ static char null_filter(char c)
 
 filter_function get_filter_function(const char *filter_name)
 {
-    if (filter_name == NULL) {
+    if(filter_name == NULL)
+    {
         fprintf(stderr, "Error: filter_name is NULL.\n");
-        return NULL; // Or handle it according to your application's logic
+        return NULL;    // Or handle it according to your application's logic
     }
 
     if(strcmp(filter_name, "upper") == 0)
